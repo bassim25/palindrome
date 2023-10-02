@@ -1,0 +1,29 @@
+ALGORITHM palindrome
+VAR
+    word = word.lower()  # Convert to lowercase for case-insensitive comparison
+    left, right = 0, len(word) - 1  # Initialize pointers
+BEGIN
+    while left <= right:
+        if word[left] != word[right]:
+            return False  # Mismatched characters
+        left += 1
+        right -= 1
+         return True  # No mismatched characters, it's a palindrome
+
+# Test cases
+print(is_palindrome("gag"))       # True
+print(is_palindrome("kayak"))     # True
+print(is_palindrome("php"))       # True
+print(is_palindrome("radar"))     # True
+print(is_palindrome("hello"))     # False
+        
+    END_FOR
+
+    
+
+
+
+
+
+
+END
